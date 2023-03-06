@@ -10,7 +10,6 @@ public class MovementScriptBlue : MonoBehaviour
     private PlayerControlsBlue playerControls;
     private Vector2 moveDirection;
     private InputAction move;
-    private InputAction fire;
 
     private void Awake()
     {
@@ -27,17 +26,9 @@ public class MovementScriptBlue : MonoBehaviour
         move = playerControls.Player.MoveBlue;
         move.Enable();
 
-        fire = playerControls.Player.Fire;
-        fire.Enable();
-        fire.performed += Fire;
     }
     private void OnDisable()
     {
         move.Disable();
-        fire.Disable();
-    }
-    private void Fire(InputAction.CallbackContext context)
-    {
-        Debug.Log("We fired");
     }
 }
