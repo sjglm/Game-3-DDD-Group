@@ -13,8 +13,8 @@ public class PlayerManager : MonoBehaviour
 
     bool grabbedFlag = false;
     Collider2D Flag;
-    Vector2 redFlagStartLocation = new Vector2(-7.7f, 0.789f);
-    Vector2 blueFlagStartLocation = new Vector2(8.96f, 1.16f);
+    Vector2 redFlagStartLocation = new Vector2(-20, -19);
+    Vector2 blueFlagStartLocation = new Vector2(20, 21);
 
     private void Start()
     {
