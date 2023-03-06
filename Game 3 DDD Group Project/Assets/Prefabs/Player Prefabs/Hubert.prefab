@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &825676543866378329
+--- !u!1 &2716401325321006193
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3019070364355396393}
-  - component: {fileID: 839566044836345891}
-  - component: {fileID: 2104322564784791549}
+  - component: {fileID: 7118598332777460671}
+  - component: {fileID: 730825758243882038}
+  - component: {fileID: 5784206953838978}
   m_Layer: 0
   m_Name: BlueCamera
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3019070364355396393
+--- !u!4 &7118598332777460671
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825676543866378329}
+  m_GameObject: {fileID: 2716401325321006193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,13 +33,13 @@ Transform:
   m_Father: {fileID: 5993948031859581009}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &839566044836345891
+--- !u!20 &730825758243882038
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825676543866378329}
+  m_GameObject: {fileID: 2716401325321006193}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -52,7 +52,7 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5
+    x: 0
     y: 0
     width: 0.5
     height: 1
@@ -76,13 +76,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2104322564784791549
+--- !u!81 &5784206953838978
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 825676543866378329}
+  m_GameObject: {fileID: 2716401325321006193}
   m_Enabled: 1
 --- !u!1 &5993948031859581038
 GameObject:
@@ -119,7 +119,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2334343302478275448}
-  - {fileID: 3019070364355396393}
+  - {fileID: 7118598332777460671}
   m_Father: {fileID: 5993948032309801178}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
