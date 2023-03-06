@@ -7,12 +7,19 @@ using UnityEngine.UIElements;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField]
-    private float HitPoints = 100f;
+    public int maxHealth = 100;
+    public int currentHealth;
+    public HealthBarScript healthBar;
+
     bool grabbedFlag = false;
     Collider2D Flag;
     Vector2 redFlagStartLocation = new Vector2(-7.7f, 0.789f);
     Vector2 blueFlagStartLocation = new Vector2(8.96f, 1.16f);
 
+    private void Start()
+    {
+        HealthStartSetter();
+    }
     private void Update()
     {
         if(grabbedFlag == true)
@@ -59,5 +66,10 @@ public class PlayerManager : MonoBehaviour
                 Flag.transform.position = blueFlagStartLocation;
             }
         }
+    }
+    private void HealthStartSetter()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 }
