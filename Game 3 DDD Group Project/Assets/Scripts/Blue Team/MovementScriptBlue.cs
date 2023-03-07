@@ -27,7 +27,7 @@ public class MovementScriptBlue : MonoBehaviour
         move.Enable();
 
     }
-    private void OnDisable()
+    public void DisableMovement()
     {
         move.Disable();
     }
