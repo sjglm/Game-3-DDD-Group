@@ -13,7 +13,7 @@ public class ReginaldSpawner : MonoBehaviour
         Instantiate(Reginald, spawnPoint, Quaternion.identity);
     }
 
-    Vector2 GetReginaldSpawnPoint()
+    public Vector2 GetReginaldSpawnPoint()
     {
         return spawnPoint; 
     }

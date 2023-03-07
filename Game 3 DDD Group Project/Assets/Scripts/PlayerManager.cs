@@ -6,10 +6,12 @@ using UnityEngine.UIElements;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField]
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBarScript healthBar;
+    public Slider blueScoreSlider;
+    public Slider redScoreSlider;
+
 
     bool grabbedFlag = false;
     Collider2D Flag;
@@ -22,7 +24,7 @@ public class PlayerManager : MonoBehaviour
     }
     private void Update()
     {
-        if(grabbedFlag == true)
+        if (grabbedFlag == true)
         {
             CarryFlag();
         }
@@ -43,24 +45,25 @@ public class PlayerManager : MonoBehaviour
         {
             grabbedFlag = true;
             Flag = collision;
+            blueScoreSlider.value += 1;
         }
-        if(tag == "RedPlayer" && collision.tag == "Blueflag")
+        if (tag == "RedPlayer" && collision.tag == "Blueflag")
         {
             grabbedFlag = true;
             Flag = collision;
+            redScoreSlider.value += 1;
         }
     }
     private void FlagScorer(Collider2D collision)
     {
-        if(grabbedFlag != true) { }
-        if(grabbedFlag == true)
+        if (grabbedFlag == true)
         {
-            if(tag == "BluePlayer" && collision.tag == "BlueFlagPad")
+            if (tag == "BluePlayer" && collision.tag == "BlueFlagPad")
             {
                 grabbedFlag = false;
                 Flag.transform.position = redFlagStartLocation;
             }
-            else if(tag == "RedPlayer" && collision.tag == "RedFlagPad")
+            else if (tag == "RedPlayer" && collision.tag == "RedFlagPad")
             {
                 grabbedFlag = false;
                 Flag.transform.position = blueFlagStartLocation;
