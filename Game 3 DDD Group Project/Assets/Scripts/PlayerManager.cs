@@ -9,8 +9,7 @@ public class PlayerManager : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public HealthBarScript healthBar;
-    public Slider blueScoreSlider;
-    public Slider redScoreSlider;
+    public Scorer scorer;
 
 
     bool grabbedFlag = false;
@@ -45,13 +44,11 @@ public class PlayerManager : MonoBehaviour
         {
             grabbedFlag = true;
             Flag = collision;
-            blueScoreSlider.value += 1;
         }
         if (tag == "RedPlayer" && collision.tag == "Blueflag")
         {
             grabbedFlag = true;
             Flag = collision;
-            redScoreSlider.value += 1;
         }
     }
     private void FlagScorer(Collider2D collision)
@@ -62,11 +59,13 @@ public class PlayerManager : MonoBehaviour
             {
                 grabbedFlag = false;
                 Flag.transform.position = redFlagStartLocation;
+                scorer.IncreaseBlueScore();
             }
             else if (tag == "RedPlayer" && collision.tag == "RedFlagPad")
             {
                 grabbedFlag = false;
                 Flag.transform.position = blueFlagStartLocation;
+                scorer.IncreaseRedScore();
             }
         }
     }
