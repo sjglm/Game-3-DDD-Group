@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/BlueTeamWin.unity
+    guid: 0a9a88335523fe543ab30c736140c51a
+  - enabled: 1
+    path: Assets/Scenes/RedTeamWin.unity
+    guid: b2b2336e4ef47c344bd53c8008a8a3bf
   m_configObjects: {}

@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 5993948031859581012}
   - component: {fileID: 1032073236194179748}
   - component: {fileID: 8944392056523361480}
+  - component: {fileID: 4727338418924817226}
   m_Layer: 0
   m_Name: Player Body
   m_TagString: BluePlayer
@@ -273,6 +274,21 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 3799184286786148690}
+  scorer: {fileID: 4727338418924817226}
+--- !u!114 &4727338418924817226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993948031859581038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1051588bd44f9db4db246f894ffa8032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueScoreSlider: {fileID: 7136791396376439577}
+  redScoreSlider: {fileID: 8146835689376291344}
 --- !u!1 &5993948032309801179
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +503,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7794526137838767080, guid: 49c12e5d8bf1eb649a86b7407f294f9d, type: 3}
   m_PrefabInstance: {fileID: 1090224944845170603}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7136791396376439577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7794526138601098418, guid: 49c12e5d8bf1eb649a86b7407f294f9d, type: 3}
+  m_PrefabInstance: {fileID: 1090224944845170603}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1338974073749165352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1020,3 +1047,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4064328279228598608, guid: 386046fa24b5b61459ffac5f578216fb, type: 3}
   m_PrefabInstance: {fileID: 5289542549729514522}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8146835689376291344 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4064328278864727562, guid: 386046fa24b5b61459ffac5f578216fb, type: 3}
+  m_PrefabInstance: {fileID: 5289542549729514522}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
