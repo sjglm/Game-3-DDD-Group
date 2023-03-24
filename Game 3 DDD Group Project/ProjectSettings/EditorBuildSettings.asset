@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RedTeamWin.unity
     guid: b2b2336e4ef47c344bd53c8008a8a3bf
+  - enabled: 1
+    path: Assets/Scenes/Draw.unity
+    guid: bf0ecd04ee9f8a94a9a42fc9e386cfc5
   m_configObjects: {}
