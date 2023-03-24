@@ -31,7 +31,11 @@ public class PlayerManager : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         FlagGrabber(collision);
-        FlagScorer(collision);
+        FlagScorer(collision);    
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Damager(collision);
     }
     private void CarryFlag()
     {
@@ -73,5 +77,14 @@ public class PlayerManager : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+    }
+
+    private void Damager(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Damage")
+        {
+            currentHealth -= 10;
+            healthBar.SetHealth(currentHealth);
+        }
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1191274640250435615}
   m_Layer: 0
   m_Name: Lerper-LeftToRight
-  m_TagString: Untagged
+  m_TagString: Damage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

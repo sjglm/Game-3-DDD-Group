@@ -10,6 +10,7 @@ TagManager:
   - RedFlag
   - RedFlagPad
   - BlueFlagPad
+  - Damage
   layers:
   - Default
   - TransparentFX
