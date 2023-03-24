@@ -41,4 +41,13 @@ public class Scorer : MonoBehaviour
             SceneManager.LoadScene("RedTeamWin");
         }
     }
+
+    public int ReturnBlueScore()
+    {
+        return (int)blueScoreSlider.value;
+    }
+    public int ReturnRedScore()
+    {
+        return (int)redScoreSlider.value;
+    }
 }

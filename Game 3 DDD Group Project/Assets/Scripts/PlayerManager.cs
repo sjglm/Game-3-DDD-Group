@@ -30,6 +30,10 @@ public class PlayerManager : MonoBehaviour
         if (grabbedFlag == true)
         {
             CarryFlag();
+            if(currentHealth <= 0)
+            {
+                FlagReplacer();
+            }
         }
         if(currentHealth <= 0)
         {
@@ -108,6 +112,22 @@ public class PlayerManager : MonoBehaviour
             transform.position = rs.GetReginaldSpawnPoint();
             currentHealth = maxHealth;
             healthBar.SetHealth(maxHealth);
+        }
+    }
+    private void FlagReplacer()
+    {
+        grabbedFlag = false;
+        if (Flag != null)
+        {
+            if (Flag.tag == "RedFlag")
+            {
+                Flag.transform.position = redFlagStartLocation;
+            }
+            else if (Flag.tag == "BlueFlag")
+            {
+                Flag.transform.position = blueFlagStartLocation;
+            }
+            Flag = null;
         }
     }
 }
