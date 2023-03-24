@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     public HealthBarScript healthBar;
     public Scorer scorer;
 
+    public ReginaldSpawner rs;
+    public HubertSpawner hs;
 
     bool grabbedFlag = false;
     Collider2D Flag;
@@ -20,12 +22,18 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         HealthStartSetter();
+        hs = GameObject.Find("Blue Spawn").GetComponent<HubertSpawner>();
+        rs = GameObject.Find("Red Spawn").GetComponent<ReginaldSpawner>();
     }
     private void Update()
     {
         if (grabbedFlag == true)
         {
             CarryFlag();
+        }
+        if(currentHealth <= 0)
+        {
+            RespawnPlayer();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -73,7 +81,7 @@ public class PlayerManager : MonoBehaviour
             }
         }
     }
-    private void HealthStartSetter()
+    public void HealthStartSetter()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
@@ -85,6 +93,21 @@ public class PlayerManager : MonoBehaviour
         {
             currentHealth -= 10;
             healthBar.SetHealth(currentHealth);
+        }
+    }
+    private void RespawnPlayer()
+    {
+        if(tag == "BluePlayer")
+        {
+            transform.position = hs.GetHubertSpawnPoint();
+            currentHealth = maxHealth;
+            healthBar.SetHealth(maxHealth);
+        }
+        else
+        {
+            transform.position = rs.GetReginaldSpawnPoint();
+            currentHealth = maxHealth;
+            healthBar.SetHealth(maxHealth);
         }
     }
 }
