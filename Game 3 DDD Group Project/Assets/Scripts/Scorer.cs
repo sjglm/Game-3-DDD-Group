@@ -32,11 +32,11 @@ public class Scorer : MonoBehaviour
 
     public void ScoreChecker()
     {
-        if (blueScoreSlider.value == 5)
+        if (blueScoreSlider.value == 1)
         {
             SceneManager.LoadScene("BlueTeamWin");
         }
-        else if(redScoreSlider.value == 5)
+        else if(redScoreSlider.value == 1)
         {
             SceneManager.LoadScene("RedTeamWin");
         }
