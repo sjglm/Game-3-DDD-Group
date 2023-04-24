@@ -9,6 +9,7 @@ public class Scorer : MonoBehaviour
     public Slider blueScoreSlider;
     public Slider redScoreSlider;
 
+
     private void Start()
     {
         blueScoreSlider.value = 0;
@@ -32,11 +33,11 @@ public class Scorer : MonoBehaviour
 
     public void ScoreChecker()
     {
-        if (blueScoreSlider.value == 1)
+        if (blueScoreSlider.value == 3)
         {
             SceneManager.LoadScene("BlueTeamWin");
         }
-        else if(redScoreSlider.value == 1)
+        else if(redScoreSlider.value == 3)
         {
             SceneManager.LoadScene("RedTeamWin");
         }
